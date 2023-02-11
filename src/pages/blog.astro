@@ -9,13 +9,12 @@ import Text from '../components/Text.astro';
 
 // const res=await fetch('http://127.0.0.1:8000/api/snippets')
 // const snippets=await res.json()
-const allSnippets=await getCollection('blog')
-
+const allSnippets = await getCollection('blog');
 ---
 
 <Layout title='Welcome to My Blog'>
   <Header />
- 
+
   <main>
     <!-- hero -->
     <Hero />
@@ -23,18 +22,17 @@ const allSnippets=await getCollection('blog')
     <section
       class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'
     >
-    <!-- <Text title='new work' style='' /> -->
-      {allSnippets.map((d)=>(
-      <article>
+      <!-- <Text title='new work' style='' /> -->
+      {
+        allSnippets.map((d) => (
+          <article>
             <a href={`/blog/${d.slug}/`}>
               <div class='border rounded-lg group cursor-pointer overflow-hidden shadow-sm shadow-gray-600 '>
-          
+                <img src='' alt='' />
                 <div class='flex justify-between p-2'>
                   <div>
                     <p class='text-lg font-bold'>{d.data.title}</p>
-                    <p class='text-xs'>
-                      {d.data.excerpt}
-                    </p>
+                    <p class='text-xs'>{d.data.excerpt}</p>
                   </div>
                   <img
                     src='/ali.jpg'
@@ -45,10 +43,8 @@ const allSnippets=await getCollection('blog')
               </div>
             </a>
           </article>
-     ))} 
-
-   
+        ))
+      }
     </section>
-
   </main>
 </Layout>
