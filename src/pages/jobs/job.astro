@@ -1,0 +1,228 @@
+---
+import Header from '../../components/Header.astro';
+import Layout from '../../layouts/Layout.astro';
+import { Icon } from 'astro-icon';
+---
+
+<Layout title='job'>
+  <Header />
+  <section class='container max-w-7xl mx-auto px-10 py-10'>
+    <!-- tap -->
+    <div class=''>
+      <a
+        href='#'
+        class='text-slate-600 font-semibold text-[18px] py-10s inline-block'
+        >Courses {'>'} <span class='text-black'>Design & Branding</span>
+      </a>
+
+      <!-- big title -->
+      <h2 class='font-bold text-2xl md:text-5xl py-4'>
+        Symbol Design For Branding
+      </h2>
+      <p class='text-gray-400 text-2xl'>
+        Learn how to create symbols for brand identities that allow people to
+        understand your brand right away.
+      </p>
+      <!-- rating -->
+      <div class='my-4 flex items-center space-x-5 cursor-pointer'>
+        <div class='flex items-center justify-center space-x-2'>
+          <Icon pack='mdi' name='star' class='w-7 text-yellow-400' />
+          <Icon pack='mdi' name='star' class='w-7 text-yellow-400' />
+          <Icon pack='mdi' name='star' class='w-7 text-yellow-400' />
+          <span class='text-slate-600 font-light'> 4.5(137 Reviews)</span>
+        </div>
+        <div class='flex items-center justify-center space-x-2'>
+          <Icon pack='mdi' name='youtube' class='w-7 text-green-600' />
+          <span class='font-bold text-[18px]'>29 videos</span>
+        </div>
+        <div class='flex items-center justify-center space-x-2'>
+          <!-- <Icon pack="mdi" name="time-filled" class='w-7 text-red-600' /> -->
+          <svg
+            class='text-green-500'
+            xmlns='http://www.w3.org/2000/svg'
+            width='32'
+            height='32'
+            viewBox='0 0 24 24'
+            ><path
+              fill='currentColor'
+              d='M9 3V1h6v2Zm2 11h2V8h-2Zm1 8q-1.85 0-3.488-.712q-1.637-.713-2.862-1.938t-1.938-2.862Q3 14.85 3 13t.712-3.488Q4.425 7.875 5.65 6.65t2.862-1.937Q10.15 4 12 4q1.55 0 2.975.5t2.675 1.45l1.4-1.4l1.4 1.4l-1.4 1.4Q20 8.6 20.5 10.025Q21 11.45 21 13q0 1.85-.712 3.488q-.713 1.637-1.938 2.862t-2.862 1.938Q13.85 22 12 22Zm0-2q2.9 0 4.95-2.05Q19 15.9 19 13q0-2.9-2.05-4.95Q14.9 6 12 6Q9.1 6 7.05 8.05Q5 10.1 5 13q0 2.9 2.05 4.95Q9.1 20 12 20Zm0-7Z'
+            ></path></svg
+          >
+          <span class='font-bold text-[18px]'>1.5 Hours</span>
+        </div>
+      </div>
+
+      <!-- video -->
+      <div>
+        <img
+          src='/metaverse.jpg'
+          class='w-[50rem] object-cover rounded'
+          alt=''
+        />
+      </div>
+
+      <!-- author info -->
+      <div
+        class='flex flex-col md:flex-row md:justify-start justify-center items-center space-x-3 py-5'
+      >
+        <img
+          src='/ali.jpg'
+          class='w-40 h-40 md:w-20 md:h-20 rounded-full object-cover'
+          alt=''
+        />
+        <div class='text-center md:text-left'>
+          <h5 class='font-bold text-2xl md:text-3xl'>By Ali Alzubair</h5>
+          <p class='text-gray-500 text-xl'>
+            Expert freelance graphic designer; Worked with Nike, Fender and
+            Oakley
+          </p>
+        </div>
+      </div>
+
+      <!-- what can do able after this course -->
+      <div class='py-10'>
+        <h2 class='text-2xl font-bold md:text-4xl py-3'>
+          After Completing This Course You Will Be Able To
+        </h2>
+        <ul
+          class='flex md:flex-row md:items-center md:space-x-3 flex-col space-y-2'
+        >
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✅ Have a deep understanding of the use of symbols in brand identity
+            systems
+          </li>
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✅ Ace the initial stage of a project by clarifying intent and
+            working with a client brief
+          </li>
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✅ Ace the initial stage of a project by clarifying intent and
+            working with a client brief
+          </li>
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✅ Ace the initial stage of a project by clarifying intent and
+            working with a client brief
+          </li>
+        </ul>
+      </div>
+
+      <!-- About This Course -->
+      <div class='py-10'>
+        <h2 class='text-2xl font-bold md:text-4xl py-3'>About This Course</h2>
+        <p class='text-xl font-light text-slate-500'>
+          Symbols have significant cultural value, hold meaning in different
+          settings and are immediately recognizable to large numbers of people.
+          As such, brand logos harness the power of the symbol to create
+          engaging, memorable identities that people come to know and love over
+          time. This course will equip you with practical techniques to create
+          beautiful, functional and recognizable brand symbols. The course is
+          divided into 4 major sections covering an overview of symbols as a
+          design practice and cultural concept, defining the needs of a branding
+          project and setting up a good working process, ideation techniques for
+          illustration and typography and bringing your ideas into a digital
+          space. You’ll build your own set of brand symbols throughout the
+          course and by the end, you’ll have a full presentation showing off
+          your best design thinking.
+        </p>
+      </div>
+      <!-- share icon -->
+      <!-- //todo make compoent to section  -->
+      <div class='py-10'>
+        <div class='flex space-x-5'>
+          <h6 class='text-xl font-bold text-gray-600'>Share on:</h6>
+          <Icon
+            pack='mdi'
+            name='facebook'
+            class='w-8 text-indigo-600 hover:opacity-25 transition-all duration-300 cursor-pointer'
+          />
+          <Icon
+            pack='mdi'
+            name='twitter'
+            class='w-8 text-indigo-600 hover:opacity-25 transition-all duration-300 cursor-pointer'
+          />
+          <Icon
+            pack='mdi'
+            name='whatsapp'
+            class='w-8 text-green-600 hover:opacity-25 transition-all duration-300 cursor-pointer'
+          />
+        </div>
+      </div>
+      <!-- What You Will Learn -->
+      <div>
+        <h2 class='text-2xl font-bold md:text-4xl py-3'>What You Will Learn</h2>
+        <ul
+          class='flex md:flex-row md:items-center md:space-x-3 flex-col space-y-2'
+        >
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✔ What makes a good symbol, minimalism vs. abstraction and types of
+            brandmarks
+          </li>
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✔ What makes a good symbol, minimalism vs. abstraction and types of
+            brandmarks
+          </li>
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✔ What makes a good symbol, minimalism vs. abstraction and types of
+            brandmarks
+          </li>
+          <li class='text-[22px] md:text-xl text-slate-500'>
+            ✔ What makes a good symbol, minimalism vs. abstraction and types of
+            brandmarks
+          </li>
+        </ul>
+      </div>
+
+      <!-- Why Learn With Mitchel Hunt? -->
+      <div class='py-10'>
+        <h2 class='text-2xl font-bold md:text-4xl py-3'>
+          Why Learn With Mitchel Hunt?
+        </h2>
+        <p class='text-xl text-slate-500 md:text-2xl'>
+          Expert freelance graphic designer with a focus in brand identity.
+          Mitchel has directed and produced projects in packaging, print,
+          product ideation, apparel, environmental graphics, web/social
+          marketing, motion graphics, videography and photography. Worked With:
+          Nike, Fender and Oakley.
+        </p>
+      </div>
+      <!-- Requirements -->
+      <div class=''>
+        <h2 class='text-2xl font-bold md:text-4xl py-3'>Requirements</h2>
+        <ul class='flex flex-col space-y-5 py-5'>
+          <li class='flex items-center text-xl'>
+            <span class='bg-green-600 p-2 rounded-full inline-block mr-2'
+            ></span> Adobe Creative Suite
+          </li>
+          <li class='flex items-center text-xl'>
+            <span class='bg-green-600 p-2 rounded-full inline-block mr-2'
+            ></span> Access to Internet
+          </li>
+          <li class='flex items-center text-xl'>
+            <span class='bg-green-600 p-2 rounded-full inline-block mr-2'
+            ></span> Computer / Laptop / Mobile Device
+          </li>
+        </ul>
+      </div>
+      <!-- What Is Included? -->
+      <div class='py-10'>
+        <h2 class='text-2xl font-bold md:text-4xl py-3'>What Is Included?</h2>
+        <ol class='flex flex-col space-y-5 py-5'>
+          <li class='text-[20px] text-slate-500'>
+            ✔ Immediate unlimited access to course materials
+          </li>
+          <li class='text-[20px] text-slate-500'>
+            ✔ 30-day money-back guarantee
+          </li>
+          <li class='text-[20px] text-slate-500'>✔ English Closed Captions</li>
+          <li class='text-[20px] text-slate-500'>
+            ✔ Suitable for mobile or desktop
+          </li>
+          <li class='text-[20px] text-slate-500'>
+            ✔ A badge to showcase your expertise on your profile page upon
+            completion
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</Layout>

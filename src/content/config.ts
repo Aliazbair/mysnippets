@@ -8,6 +8,14 @@ const blog = defineCollection({
     author: z.enum(['Jane Doe', 'John Doe', 'ali']),
   }),
 });
+const Jobs = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    excerpt: z.string(),
+    date: z.date(),
+    author: z.enum(['ai', 'ali']),
+  }),
+});
 const react = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -16,4 +24,4 @@ const react = defineCollection({
   }),
 });
 
-export const collections = { blog, react };
+export const collections = { blog, react, Jobs };
