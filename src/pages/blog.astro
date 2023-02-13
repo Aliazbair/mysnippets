@@ -15,7 +15,7 @@ const allSnippets = await getCollection('blog');
 <Layout title='Welcome to My Blog'>
   <Header />
 
-  <main>
+  <main class="bg-slate-800 h-screen text-white">
     <!-- hero -->
     <Hero />
     <!-- posts -->
@@ -25,7 +25,7 @@ const allSnippets = await getCollection('blog');
       <!-- <Text title='new work' style='' /> -->
       {
         allSnippets.map((d) => (
-          <article>
+          <article >
             <a href={`/blog/${d.slug}/`}>
               <div class='border rounded-lg group cursor-pointer overflow-hidden shadow-sm shadow-gray-600 '>
                 <img src='' alt='' />
