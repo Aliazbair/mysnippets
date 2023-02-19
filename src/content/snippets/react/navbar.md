@@ -1,63 +1,78 @@
 ---
 title: Navbar Components
 slug: navbar-components
-excerpt: may navbar Components 
+excerpt: may navbar Components
 author: ali
 image: 'https://cdn.static-economist.com/sites/default/files/images/2015/09/blogs/economist-explains/code2.png'
 ---
 
-
-# create text component
+# navbar one
 
 ```jsx
-const Text = ({ children, className }) => {
+import { useState } from 'react';
+import { close, logo, menu } from '../assets';
+
+import { navLinks } from '../constants';
+
+const Navbar = () => {
+  const [active, setActive] = useState('Home');
+  const [toggle, setToggle] = useState(false);
   return (
-    <h1 class='text-4xl font-bold uppercase'>
-      <span
-        class={` ${className} bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500`}
-      >
-        {children}
-      </span>
-    </h1>
+    <nav className='w-full flex py-6 justify-between items-center navbar'>
+      <img src={logo} alt='logo' className='w-[124px] h-[32px]' />
+
+      {/* desktop menu */}
+      <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
+        {navLinks.map((nav, index) => (
+          <li
+            key={index}
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+              active === nav.title
+                ? 'text-slate-200 bg-blue-600 px-2 rounded'
+                : 'text-dimWhite'
+            } ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} `}
+            onClick={() => setActive(nav.title)}
+          >
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
+        ))}
+      </ul>
+
+      {/* menu in mobile */}
+      <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <img
+          src={menu}
+          alt='menu'
+          className='w-[28px] h-[28px] object-contain '
+          onClick={() => setToggle(!toggle)}
+        />
+
+        <div
+          className={`${
+            !toggle ? 'hidden' : 'flex'
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
+        >
+          <ul className='list-none flex justify-end items-start flex-1 flex-col'>
+            {navLinks.map((nav, index) => (
+              <li
+                key={index}
+                className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                  active === nav.title ? 'text-slate-600 ' : 'text-dimWhite'
+                } ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} `}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
-export default Text;
+export default Navbar;
 ```
-
-## create Card Component with grid
-
-```jsx
-function Card({ children, className }) {
-  return (
-    <div className={`py-4 grid gap-4 md:grid-cols-2 ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-export default Card;
-```
-
-## create input component
-
-```jsx
-import React from 'react';
-
-export const Input = ({ type, name, handleChange, value, placeholder }) => {
-  return (
-    <input
-      type={type}
-      name={name}
-      className='shadow border text-gray-700 rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 focus:ring outline-none'
-      value={value}
-      onChange={handleChange}
-      placeholder={placeholder}
-    />
-  );
-};
-```
-
 
 ## create Navbar component
 
@@ -143,4 +158,4 @@ export default function Navbar() {
     </nav>
   );
 }
-
+```
